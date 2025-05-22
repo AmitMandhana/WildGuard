@@ -237,7 +237,7 @@ const DiseaseClassifier = () => {
     const symptomList = symptoms.map(symptom => selectedSymptoms.includes(symptom) ? 1 : 0);
 
     // Send the symptomList to the Flask backend
-    axios.post('http://localhost:5000/symptoms', { symptomList })
+    axios.post('https://wildguard-back-2.onrender.com/symptoms', { symptomList })
       .then(response => {
         setResponseText(response.data.disease_name); // Display the disease name
         setDiseaseInfo(response.data); // Store the disease info

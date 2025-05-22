@@ -13,7 +13,7 @@ const ImageUpload = () => {
         const formData = new FormData();
         formData.append('file', image);
 
-        axios.post('http://localhost:5000/lost', formData, {
+        axios.post('https://wildguard-back-2.onrender.com/lost', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },

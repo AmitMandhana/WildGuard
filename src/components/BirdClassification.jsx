@@ -71,7 +71,7 @@ function BirdClassification() {
         const formData = new FormData();
         formData.append('image', selectedFile);  // Make sure the key here matches the key in your Flask app
 
-        axios.post('http://localhost:5000/classify', formData)
+        axios.post('https://wildguard-back-2.onrender.com/classify', formData)
             .then((response) => {
                 setClassName(response.data.common_name);
                 setImageUrl(response.data.imageUrl);
@@ -95,7 +95,7 @@ function BirdClassification() {
             {message && <p>{message}</p>}
             {imageUrl && (
                 <div>
-                    <img src={`http://localhost:5000${imageUrl}`} alt="Uploaded" style={{ maxWidth: '300px', marginTop: '20px' }} />
+                    <img src={`https://wildguard-back-2.onrender.com${imageUrl}`} alt="Uploaded" style={{ maxWidth: '300px', marginTop: '20px' }} />
                     <p>Predicted Class: {className}</p>
                     
                     {/* Display buttons for each detail */}

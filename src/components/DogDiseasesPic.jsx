@@ -65,7 +65,7 @@ function DogDiseasesPic() {
         const formData = new FormData();
         formData.append('image', selectedFile);  // Make sure the key here matches the key in your Flask app
 
-        axios.post('http://localhost:5000/dogs_classify', formData)
+        axios.post('https://wildguard-back-2.onrender.com/dogs_classify', formData)
             .then((response) => {
                 setDiseaseName(response.data.disease_name);
                 setImageUrl(response.data.imageUrl);
@@ -98,7 +98,7 @@ function DogDiseasesPic() {
             {message && <p>{message}</p>}
             {imageUrl && (
                 <div>
-                    <img src={`http://localhost:5000${imageUrl}`} alt="Uploaded" style={{ maxWidth: '300px', marginTop: '20px' }} />
+                    <img src={`https://wildguard-back-2.onrender.com${imageUrl}`} alt="Uploaded" style={{ maxWidth: '300px', marginTop: '20px' }} />
                     <h3>Disease Name: {diseaseName}</h3>
                     
                     {/* Display buttons for each detail */}

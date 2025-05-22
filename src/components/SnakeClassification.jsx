@@ -62,7 +62,7 @@ function ImageUploader() {
         const formData = new FormData();
         formData.append('image', selectedFile);
 
-        axios.post('http://localhost:5000/upload', formData)
+        axios.post('https://wildguard-back-2.onrender.com/upload', formData)
             .then((response) => {
                 setSnakeData(response.data);
             })
@@ -84,7 +84,7 @@ function ImageUploader() {
             {snakeData && (
                 <div>
                     <h3>{snakeData.common_name}</h3>
-                    <img src={`http://localhost:5000${snakeData.imageUrl}`} alt="Uploaded" />
+                    <img src={`https://wildguard-back-2.onrender.com${snakeData.imageUrl}`} alt="Uploaded" />
                     <div>
                         {Object.keys(snakeData).filter(key => key !== 'common_name' && key !== 'imageUrl').map((key) => (
                             <button key={key} onClick={() => handleButtonClick(key)}>
