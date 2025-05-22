@@ -61,7 +61,7 @@ const NgoLogin = () => {
       setIsSubmitting(true);
   
       const res = await apiRequest({
-        url: "https://wildguard-back-2.onrender.com/auth/login",
+        url: "/auth/login",
         data,
         method: "POST",
       });
