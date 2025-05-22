@@ -30,7 +30,7 @@ const App = () => {
   return (
 
       <Routes>
-        <Route path="/Home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/Home/AboutUs" element={<AboutUs />} />
         <Route path="/Home/Team" element={<Team />} />
         <Route path="/Home/contact-us" element={<ContactUs />} />
@@ -46,7 +46,7 @@ const App = () => {
         <Route path="/Home/Missingpet" element={<MissingPet />} />
         <Route path="/Home/DogDiseasesPic" element={<DogDiseasesPic />} />
         <Route path="/Home/DiseaseClassifier" element={<DiseaseClassifier />} />
-        <Route path="/" element={<NgoRegister />} />
+{/*         <Route path="/" element={<NgoRegister />} /> */}
         <Route path="/ngologin" element={<NgoLogin />} />
         <Route path="/Home/Profile" element={<Profile />} />
         <Route path="/Home/mgo" element={<Ngo />} />
